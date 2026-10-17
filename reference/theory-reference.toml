@@ -1,0 +1,62 @@
+# ============================================================
+# reference/theory-reference.toml
+# ============================================================
+# Theory reference configuration.
+#
+# The theory repository owns Lean source, reference TOML, and
+# generated JSON artifacts. The reusable reference kit owns the
+# generic validation, export, catalog, scaffold, and inspection
+# machinery.
+
+schema = "se-theory-reference"
+schema_version = "0.1.0"
+
+# === Repository Identity ===
+
+[repository]
+organization = "structural-explainability"
+name = "se-theory-transformation-persistence"
+theory = "transformation-persistence"
+description = "TransformationPersistence theory repository for Structural Explainability."
+
+# === Lean Public Surface ===
+
+[lean]
+root_module = "SE"
+
+public_modules = [
+    "SE",
+    "SE.TransformationPersistence",
+    "SE.TransformationPersistence.Lift",
+    "SE.TransformationPersistence.Observer",
+    "SE.TransformationPersistence.Conformance",
+    "SE.TransformationPersistence.Spec",
+]
+
+test_modules = ["SETest"]
+
+# === Reference Artifacts ===
+
+[reference]
+root = "reference"
+
+# === Exported Machine Artifacts ===
+
+[export]
+root = "data/transformation-persistence"
+
+# === Reference-Kind Mapping ===
+#
+# Generic Lean-surface kinds register public theory concepts.
+# TransformationPersistence has no finite domain catalog of its own, so there are
+# no domain catalog kinds; only the generated catalog is exported.
+
+[surface_kinds]
+vocabulary = "reference/transformation-persistence-vocabulary.toml"
+predicate = "reference/transformation-persistence-predicates.toml"
+theorem = "reference/transformation-persistence-theorems.toml"
+
+# === Export Mapping ===
+
+[export_map]
+catalog = "data/transformation-persistence/transformation-persistence-catalog.json"

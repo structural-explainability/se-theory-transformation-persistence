@@ -1,0 +1,20 @@
+# ============================================================
+# TransformationPersistence Predicates
+# se-theory-transformation-persistence
+# ============================================================
+
+schema = "se-predicate-registry-1"
+kind = "predicate"
+repo = "se-theory-transformation-persistence"
+surface_module = "SE.TransformationPersistence"
+namespace = "SE.TransformationPersistence"
+
+[predicate.AgreesOn]
+order = 1
+id = "AgreesOn"
+cite_id = "TP.DEF.AGREES_ON"
+name = "Agrees on"
+lean_symbol = "SE.TransformationPersistence.AgreesOn"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Agreement between configurations on selected dimensions."

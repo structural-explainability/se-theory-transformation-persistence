@@ -1,0 +1,93 @@
+# ============================================================
+# TransformationPersistence Theorems
+# se-theory-transformation-persistence
+# ============================================================
+# Public semantic theorems for the TransformationPersistence theory.
+#
+# Finite regression guards in SE.TransformationPersistence.Conformance are intentionally not registered here.
+
+schema = "se-theorem-registry-1"
+kind = "theorem"
+repo = "se-theory-transformation-persistence"
+surface_module = "SE.TransformationPersistence"
+namespace = "SE.TransformationPersistence"
+
+[theorem.LiftFamilyPatternEq]
+order = 1
+id = "LiftFamilyPatternEq"
+cite_id = "PS.THM.LIFT_FAMILY_PATTERN_EQ"
+name = "Lift family pattern eq"
+lean_symbol = "SE.Persistence.Classification.liftFamily_pattern_eq"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "Operators in the same family have the same pattern under a lifted classification."
+
+[theorem.LiftKindPatternEq]
+order = 2
+id = "LiftKindPatternEq"
+cite_id = "PS.THM.LIFT_KIND_PATTERN_EQ"
+name = "Lift kind pattern eq"
+lean_symbol = "SE.Persistence.Classification.liftKind_pattern_eq"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "Operators of the same kind have the same pattern under a lifted classification."
+
+[theorem.ObserveEqIff]
+order = 3
+id = "ObserveEqIff"
+cite_id = "TP.THM.OBSERVE_EQ_IFF"
+name = "Observe eq iff"
+lean_symbol = "SE.TransformationPersistence.observe_eq_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Equality of presentations is equivalent to agreement on selected dimensions."
+
+[theorem.PresentationSoundObserveIff]
+order = 4
+id = "PresentationSoundObserveIff"
+cite_id = "TP.THM.PRESENTATION_SOUND_OBSERVE_IFF"
+name = "Presentation sound observe iff"
+lean_symbol = "SE.TransformationPersistence.presentationSound_observe_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Presentation soundness is equivalent to agreement across preserving steps."
+
+[theorem.PresentationSoundOfDisjoint]
+order = 5
+id = "PresentationSoundOfDisjoint"
+cite_id = "TP.THM.PRESENTATION_SOUND_OF_DISJOINT"
+name = "Presentation sound of disjoint"
+lean_symbol = "SE.TransformationPersistence.presentationSound_of_disjoint"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Footprint disjointness is sufficient for presentation soundness."
+
+[theorem.MaximalModelAgreesIffDisjoint]
+order = 6
+id = "MaximalModelAgreesIffDisjoint"
+cite_id = "TP.THM.MAXIMAL_MODEL_AGREES_IFF_DISJOINT"
+name = "Maximal model agrees iff disjoint"
+lean_symbol = "SE.TransformationPersistence.maximalModel_agrees_iff_disjoint"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Universal agreement in the maximal model is equivalent to footprint disjointness."
+
+[theorem.PresentationSoundObserveMaximalIff]
+order = 7
+id = "PresentationSoundObserveMaximalIff"
+cite_id = "TP.THM.PRESENTATION_SOUND_OBSERVE_MAXIMAL_IFF"
+name = "Presentation sound observe maximal iff"
+lean_symbol = "SE.TransformationPersistence.presentationSound_observe_maximal_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Maximal-model presentation soundness is equivalent to footprint disjointness for preserving operators."
+
+[theorem.DetectsBreaksMaximalIff]
+order = 8
+id = "DetectsBreaksMaximalIff"
+cite_id = "TP.THM.DETECTS_BREAKS_MAXIMAL_IFF"
+name = "Detects breaks maximal iff"
+lean_symbol = "SE.TransformationPersistence.detectsBreaks_maximal_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Detection of every breaking step in the maximal model is characterized by required-change clauses."

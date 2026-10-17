@@ -1,0 +1,51 @@
+# ============================================================
+# TransformationPersistence Vocabulary
+# se-theory-transformation-persistence
+# ============================================================
+# Public Lean definitions for classification lifting along the Transformation taxonomy.
+
+schema = "se-vocabulary-registry-1"
+kind = "vocabulary"
+repo = "se-theory-transformation-persistence"
+surface_module = "SE.TransformationPersistence"
+namespace = "SE.TransformationPersistence"
+
+[vocabulary.LiftFamily]
+order = 1
+id = "LiftFamily"
+cite_id = "PS.DEF.LIFT_FAMILY"
+name = "Lift family"
+lean_symbol = "SE.Persistence.Classification.liftFamily"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Lift"
+description = "The operator-level classification induced by a family-level one."
+
+[vocabulary.LiftKind]
+order = 2
+id = "LiftKind"
+cite_id = "PS.DEF.LIFT_KIND"
+name = "Lift kind"
+lean_symbol = "SE.Persistence.Classification.liftKind"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Lift"
+description = "The operator-level classification induced by a kind-level one."
+
+[vocabulary.DynamicsOf]
+order = 3
+id = "DynamicsOf"
+cite_id = "TP.DEF.DYNAMICS_OF"
+name = "Dynamics of"
+lean_symbol = "SE.TransformationPersistence.dynamicsOf"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Observer"
+description = "The operator dynamics of a state model."
+
+[vocabulary.Observe]
+order = 4
+id = "Observe"
+cite_id = "TP.DEF.OBSERVE"
+name = "Observe"
+lean_symbol = "SE.TransformationPersistence.observe"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Observer"
+description = "The presentation determined by agreement on selected dimensions."
