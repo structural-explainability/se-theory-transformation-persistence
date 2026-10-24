@@ -56,44 +56,16 @@ remain unresolved by this bridge theory.
 No universal interpretation mapping or
 substantive referent-identity criterion is assumed.
 
-## Owns
+## Scope
 
-This repository owns:
+Repository scope is defined in `SE_MANIFEST.toml`.
 
-- the public import surface `SE/TransformationPersistence.lean`
-- the repository-level aggregator `SE.lean`
-- the `SE/TransformationPersistence/` module family
-- reference artifacts under `reference/`
-- generated artifacts under `data/transformation-persistence/`
+## Exclusions
 
-## Design Constraints
-
-Lean source files are authoritative for formal semantics and proofs.
-
-Reference registries describe the registered public surface and
-must correspond to that Lean surface.
-
-Python and generated data may mirror, validate, export, or document the Lean surface.
-They must not define theory semantics independently of Lean.
-
-## Documentation Constraints
-
-Documentation provides orientation, summaries, and navigation.
-
-It must not introduce or duplicate formal semantics maintained in Lean.
-
-Machine-readable artifacts mirror the Lean surface and reference registries
-under `data/transformation-persistence/`.
+Repository exclusions are defined in `SE_MANIFEST.toml`.
 
 ## Import
 
+Downstream Lean projects should import the public surface:
+
 `import SE.TransformationPersistence`
-
-## Tooling
-
-Python and other tooling may be used for documentation generation,
-formatting, linting, repository automation, reference validation, and
-generated artifact checks.
-
-Tooling must not replace Lean definitions or proofs or
-independently define theory semantics.
