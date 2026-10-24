@@ -7,15 +7,6 @@ This repository provides classification lifting and dimension-based observation 
 - [Lean API Reference](https://structural-explainability.github.io/se-theory-transformation-persistence/lean/)
 - [GitHub Repository](https://github.com/structural-explainability/se-theory-transformation-persistence)
 
-## Dependencies
-
-This repository depends on:
-
-- `se-theory-transformation`
-- `se-theory-persistence`
-
-Both theories retain ownership of their foundational definitions.
-
 ## Lean Modules
 
 The authoritative definitions, theorem statements, proofs, and
