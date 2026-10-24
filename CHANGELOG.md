@@ -13,6 +13,19 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.1.1] - 2026-10-24
+
+### Updated
+
+- Clarified the unresolved application-level interpretation bridge
+  between observed operations, Transformation dimensions, and
+  warranted referent identity.
+- Updated to newer lake dependency versions
+- Updated some GitHub action dependency versions
+- Updated minor annotations
+
+---
+
 ## [0.1.0] - 2026-10-16
 
 ### Added
@@ -58,6 +71,7 @@ Follow these steps exactly when creating a new release.
 1.2. lakefile.toml: update version
 1.3. CHANGELOG.md: add section, move unreleased entries, update links
 1.4. pyproject.toml: update version (near top of the file)
+1.5. .github/workflows/deploy-zensical-lean.yml (optional temporary version in BB1)
 
 ### Task 2. Set up and Validate
 
@@ -73,6 +87,7 @@ uvx gha-tools autoupdate --pin=all --write .github/workflows
 # NO .github\workflows\deploy-zensical.yml
 # YES  .github\workflows\deploy-zensical-lean.yml
 uvx zizmor@latest .github/
+# some suppressed is still okay
 
 # Validate.
 uvx cffconvert --validate
@@ -148,5 +163,6 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-theory-transformation-persistence/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-theory-transformation-persistence/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.1.1
 [0.1.0]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.1.0

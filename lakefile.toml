@@ -10,22 +10,33 @@
 # lake lint
 
 # ============================================================
-# PROJECT IDENTITY
+# === PROJECT IDENTITY ===
 # ============================================================
 
 name = "se-theory-transformation-persistence"
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT"
 
 
 # ============================================================
-# BUILD SURFACE
+# === BUILD SURFACE ===
 # ============================================================
 # defaultTargets must include the public Lean library root.
 
 defaultTargets = ["SE.TransformationPersistence"]
 testDriver = "SETest"
 lintDriver = "SELint"
+
+# ============================================================
+# === DEPENDENCIES ===
+# ============================================================
+
+[[require]]
+# Mathlib provides standard infrastructure used by this library.
+# Mathlib release must match the Lean version in lean-toolchain.
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.34.0"
 
 [[require]]
 name = "se-theory-transformation"
@@ -35,10 +46,10 @@ rev = "v0.5.1"
 [[require]]
 name = "se-theory-persistence"
 git = "https://github.com/structural-explainability/se-theory-persistence"
-rev = "v0.4.0"
+rev = "v0.5.0"
 
 # ============================================================
-# LEAN OPTIONS
+# === LEAN OPTIONS ===
 # ============================================================
 
 [leanOptions]
@@ -57,18 +68,7 @@ weak.linter.allScriptsDocumented = false
 weak.linter.unicodeLinter = false
 
 # ============================================================
-# DEPENDENCIES
-# ============================================================
-# Mathlib provides standard infrastructure used by this library.
-# Mathlib release must match the Lean version in lean-toolchain.
-
-[[require]]
-name = "mathlib"
-scope = "leanprover-community"
-rev = "v4.34.0"
-
-# ============================================================
-# PUBLIC LIBRARY
+# === PUBLIC LIBRARY ===
 # ============================================================
 # The library downstream packages import. It must claim only the module
 # family owned by this package. Other packages own other SE.* families.
@@ -93,7 +93,7 @@ globs = ["SE.TransformationPersistence.*"]
 
 
 # ============================================================
-# TEST LIBRARY
+# === TEST LIBRARY ===
 # ============================================================
 # Internal verification; not part of downstream public import surface.
 
@@ -105,7 +105,7 @@ leanOptions = { weak.linter.style.header = false }
 
 
 # ============================================================
-# LINT DRIVER
+# === LINT DRIVER ===
 # ============================================================
 
 [[lean_exe]]

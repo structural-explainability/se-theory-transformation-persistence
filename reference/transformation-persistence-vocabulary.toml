@@ -49,3 +49,13 @@ lean_symbol = "SE.TransformationPersistence.observe"
 lean_kind = "def"
 source_module = "SE.TransformationPersistence.Observer"
 description = "The presentation determined by agreement on selected dimensions."
+
+[vocabulary.ObserverSetoid]
+order = 5
+id = "ObserverSetoid"
+cite_id = "TP.DEF.OBSERVER_SETOID"
+name = "Observer setoid"
+lean_symbol = "SE.TransformationPersistence.observerSetoid"
+lean_kind = "def"
+source_module = "SE.TransformationPersistence.Observer"
+description = "Equivalence relation on configurations induced by agreement on selected dimensions."

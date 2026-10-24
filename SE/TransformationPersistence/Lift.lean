@@ -65,36 +65,42 @@ theorem Classification.liftKind_pattern_eq
   show c.pattern (operatorKind a) = c.pattern (operatorKind b)
   rw [h]
 
+-- RR.DEFINES: PS.THM.LIFT_FAMILY_COARSE
 /-- The coarse value at an operator is the coarse value at its family. -/
 theorem Classification.liftFamily_coarse
     (c : Classification TransformationFamily) (op : OperatorCode) :
     c.liftFamily.coarse op = c.coarse (operatorFamily op) :=
   rfl
 
+-- RR.DEFINES: PS.THM.LIFT_KIND_COARSE
 /-- The coarse value at an operator is the coarse value at its kind. -/
 theorem Classification.liftKind_coarse
     (c : Classification TransformationKind) (op : OperatorCode) :
     c.liftKind.coarse op = c.coarse (operatorKind op) :=
   rfl
 
+-- RR.DEFINES: PS.THM.LIFT_FAMILY_IS_PRS_IFF
 /-- An operator is preserving exactly when its family is. -/
 theorem Classification.liftFamily_isPrs_iff
     (c : Classification TransformationFamily) (op : OperatorCode) :
     c.liftFamily.IsPrs op ↔ c.IsPrs (operatorFamily op) :=
   Iff.rfl
 
+-- RR.DEFINES: PS.THM.LIFT_KIND_IS_PRS_IFF
 /-- An operator is preserving exactly when its kind is. -/
 theorem Classification.liftKind_isPrs_iff
     (c : Classification TransformationKind) (op : OperatorCode) :
     c.liftKind.IsPrs op ↔ c.IsPrs (operatorKind op) :=
   Iff.rfl
 
+-- RR.DEFINES: PS.THM.LIFT_FAMILY_WELL_FORMED
 /-- Lifting along families preserves well-formedness. -/
 theorem Classification.liftFamily_wellFormed
     {c : Classification TransformationFamily} (h : c.WellFormed) :
     c.liftFamily.WellFormed :=
   fun op hop => h (operatorFamily op) hop
 
+-- RR.DEFINES: PS.THM.LIFT_KIND_WELL_FORMED
 /-- Lifting along kinds preserves well-formedness. -/
 theorem Classification.liftKind_wellFormed
     {c : Classification TransformationKind} (h : c.WellFormed) :

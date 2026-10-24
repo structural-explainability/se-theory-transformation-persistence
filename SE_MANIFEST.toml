@@ -3,7 +3,7 @@
 # ============================================================
 
 schema = "se-manifest-schema"
-schema_version = "0.5.0"
+schema_version = "0.5.1"
 schema_url = "https://raw.githubusercontent.com/structural-explainability/se-manifest-schema/main/manifest-schema.toml"
 
 # === Framework Context ===
@@ -35,7 +35,7 @@ role = "transformation-persistence-bridge"
 [depends]
 required = [
   { repository = "se-theory-transformation", kind = "semantic", version = "v0.5.1" },
-  { repository = "se-theory-persistence", kind = "semantic", version = "v0.4.0" },
+  { repository = "se-theory-persistence", kind = "semantic", version = "v0.5.0" },
 ]
 optional = []
 

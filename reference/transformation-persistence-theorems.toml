@@ -91,3 +91,63 @@ lean_symbol = "SE.TransformationPersistence.detectsBreaks_maximal_iff"
 lean_kind = "theorem"
 source_module = "SE.TransformationPersistence.Observer"
 description = "Detection of every breaking step in the maximal model is characterized by required-change clauses."
+
+[theorem.LiftFamilyCoarse]
+order = 9
+id = "LiftFamilyCoarse"
+cite_id = "PS.THM.LIFT_FAMILY_COARSE"
+name = "Lift family coarse"
+lean_symbol = "SE.Persistence.Classification.liftFamily_coarse"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "The coarse classification of an operator equals the coarse classification of its family."
+
+[theorem.LiftKindCoarse]
+order = 10
+id = "LiftKindCoarse"
+cite_id = "PS.THM.LIFT_KIND_COARSE"
+name = "Lift kind coarse"
+lean_symbol = "SE.Persistence.Classification.liftKind_coarse"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "The coarse classification of an operator equals the coarse classification of its kind."
+
+[theorem.LiftFamilyIsPrsIff]
+order = 11
+id = "LiftFamilyIsPrsIff"
+cite_id = "PS.THM.LIFT_FAMILY_IS_PRS_IFF"
+name = "Lift family is preserving iff"
+lean_symbol = "SE.Persistence.Classification.liftFamily_isPrs_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "An operator is preserving under a lifted family classification exactly when its family is preserving."
+
+[theorem.LiftKindIsPrsIff]
+order = 12
+id = "LiftKindIsPrsIff"
+cite_id = "PS.THM.LIFT_KIND_IS_PRS_IFF"
+name = "Lift kind is preserving iff"
+lean_symbol = "SE.Persistence.Classification.liftKind_isPrs_iff"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "An operator is preserving under a lifted kind classification exactly when its kind is preserving."
+
+[theorem.LiftFamilyWellFormed]
+order = 13
+id = "LiftFamilyWellFormed"
+cite_id = "PS.THM.LIFT_FAMILY_WELL_FORMED"
+name = "Lift family well formed"
+lean_symbol = "SE.Persistence.Classification.liftFamily_wellFormed"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "Lifting a well-formed family classification preserves well-formedness."
+
+[theorem.LiftKindWellFormed]
+order = 14
+id = "LiftKindWellFormed"
+cite_id = "PS.THM.LIFT_KIND_WELL_FORMED"
+name = "Lift kind well formed"
+lean_symbol = "SE.Persistence.Classification.liftKind_wellFormed"
+lean_kind = "theorem"
+source_module = "SE.TransformationPersistence.Lift"
+description = "Lifting a well-formed kind classification preserves well-formedness."

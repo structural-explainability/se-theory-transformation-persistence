@@ -52,6 +52,7 @@ def dynamicsOf (M : StateModel) : Dynamics OperatorCode M.State where
 def AgreesOn (M : StateModel) (S : List Dimension) (s t : M.State) : Prop :=
   ∀ d, d ∈ S → M.agree d s t
 
+-- RR.DEFINES: TP.DEF.OBSERVER_SETOID
 /-- Agreement on `S` is an equivalence on configurations. -/
 def observerSetoid (M : StateModel) (S : List Dimension) : Setoid M.State where
   r := AgreesOn M S
