@@ -23,6 +23,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - Updated to newer lake dependency versions
 - Updated some GitHub action dependency versions
 - Updated minor annotations
+- Added new items to reference/
 
 ---
 
