@@ -136,7 +136,6 @@ jobs:
           cat > docbuild/lakefile.toml <<EOF
           name = "docbuild"
           reservoir = false
-          version = "0.1.1"
           packagesDir = "../.lake/packages"
 
           [[require]]
@@ -165,7 +164,7 @@ jobs:
           # directory named after the module's first component. TransformationPersistence and
           # Transformation both live under SE/, so expose each package's SE
           # tree inside the other's lib dir before doc-gen4 runs.
-          BRIDGE_LIB="$GITHUB_WORKSPACE/.lake/build/lib/lean"
+          THIS_LIB="$GITHUB_WORKSPACE/.lake/build/lib/lean"
           TRANS_LIB="$GITHUB_WORKSPACE/.lake/packages/se-theory-transformation/.lake/build/lib/lean"
           PERSIST_LIB="$GITHUB_WORKSPACE/.lake/packages/se-theory-persistence/.lake/build/lib/lean"
           merge_se() {
@@ -177,10 +176,10 @@ jobs:
               [ -e "$dst/$rel" ] || [ -L "$dst/$rel" ] || ln -s "$f" "$dst/$rel"
             done
           }
-          merge_se "$BRIDGE_LIB" "$TRANS_LIB"
-          merge_se "$TRANS_LIB" "$BRIDGE_LIB"
+          merge_se "$THIS_LIB" "$TRANS_LIB"
+          merge_se "$TRANS_LIB" "$THIS_LIB"
           merge_se "$PERSIST_LIB" "$TRANS_LIB"
-          merge_se "$PERSIST_LIB" "$BRIDGE_LIB"
+          merge_se "$PERSIST_LIB" "$THIS_LIB"
 
           lake build SE.TransformationPersistence:docs
 

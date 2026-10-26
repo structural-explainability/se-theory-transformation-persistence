@@ -12,8 +12,8 @@ message: "If you use this work, please cite it using the metadata in CITATION.cf
 type: software
 
 title: "SE Theory: Transformation Persistence"
-version: "0.1.1"
-date-released: "2026-10-24"
+version: "0.2.0"
+date-released: "2026-10-26"
 
 authors:
   - family-names: Case
@@ -24,7 +24,7 @@ authors:
 repository-code: "https://github.com/structural-explainability/se-theory-transformation-persistence"
 url: "https://github.com/structural-explainability/se-theory-transformation-persistence"
 
-license: MIT
+license: Apache-2.0
 
 abstract: >
   Lean 4 formalization connecting Structural Explainability Transformation
