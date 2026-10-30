@@ -13,6 +13,20 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.2.1] - 2026-10-30
+
+### Updated
+
+- Updated the Lean toolchain (see `lean-toolchain`).
+- `rel.ps1`: added `lake clean`, `CITATION.cff` validation, and Markdown lint.
+- `ci-lean.yml`: added `CITATION.cff` validation, SE manifest validation,
+  Markdown lint, and cancellation of superseded runs on the same branch.
+- `leanchecker` and the axiom audit are skipped in this repo because it
+  depends on other SE theory packages. A source scan for `axiom`
+  declarations and `native_decide` runs instead.
+
+---
+
 ## [0.2.0] - 2026-10-26
 
 ### Updated
@@ -59,10 +73,11 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## Notes on versioning and releases
 
 - We use **SemVer**:
-  - **MAJOR** - breaking changes to formal surface or validation semantics
-  - **MINOR** - backward-compatible additions to theory vocabulary or artifacts
+  - **MAJOR** - breaking changes
+  - **MINOR** - backward-compatible additions
   - **PATCH** - fixes, documentation, tooling
-- Versions are driven by git tags. Tag `vX.Y.Z` to release.
+- Versions are driven by git tags.
+- Tag `vX.Y.Z` to release.
 - During `0.x` development, breaking formal-surface changes
   may occur in a **MINOR** release.
 
@@ -91,7 +106,7 @@ Follow these steps exactly when creating a new release.
 
 ### Task 2. Set up and Validate
 
-```shell
+```pwsh
 # set up or update Python environment
 # Run repository checks.
 .\sit.ps1
@@ -140,7 +155,7 @@ git push origin vX.Y.Z
 Create GitHub Release after pushing tag, for example with a command like this:
 
 ```shell
-gh release create v0.2.0 --verify-tag --title "0.2.0"  --generate-notes
+gh release create v0.2.1 --verify-tag --title "0.2.1"  --generate-notes
 ```
 
 ## Only As Needed (delete a tag)
@@ -152,7 +167,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-theory-transformation-persistence/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-theory-transformation-persistence/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.2.1
 [0.2.0]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.2.0
 [0.1.1]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.1.1
 [0.1.0]: https://github.com/structural-explainability/se-theory-transformation-persistence/releases/tag/v0.1.0

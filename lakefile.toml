@@ -13,7 +13,7 @@
 # ============================================================
 
 name = "se-theory-transformation-persistence"
-version = "0.2.0"
+version = "0.2.1" # CUSTOM: Sets the current release version
 license = "Apache-2.0"
 
 # ============================================================
@@ -31,12 +31,12 @@ testDriver = "SETest"
 [[require]]
 name = "se-theory-transformation"
 git = "https://github.com/structural-explainability/se-theory-transformation"
-rev = "v0.6.0"
+rev = "v0.6.1"
 
 [[require]]
 name = "se-theory-persistence"
 git = "https://github.com/structural-explainability/se-theory-persistence"
-rev = "v0.6.0"
+rev = "v0.6.1"
 
 # ============================================================
 # === PUBLIC LIBRARY ===
@@ -56,7 +56,7 @@ rev = "v0.6.0"
 [[lean_lib]]
 name = "SE.TransformationPersistence"
 roots = ["SE.TransformationPersistence"]
-globs = ["SE.TransformationPersistence.*"]
+globs = ["SE", "SE.TransformationPersistence.*"]
 
 # ============================================================
 # === TEST LIBRARY ===
